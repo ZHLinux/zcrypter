@@ -1,0 +1,55 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
+import string
+import os
+
+print "\n"
+print "\t+-----------------------------------------+"
+print "\t|                                         |"
+print "\t|      Text Crypter | ZCrypter v1.0       |"
+print "\t|                                         |"
+print "\t|              Coded By Zaur              |"
+print "\t|                                         |"
+print "\t|          http://fb.com/ZHLinux          |"
+print "\t|                                         |"
+print "\t+-----------------------------------------+"
+print "\n"
+
+print """
+
+1) encrypt
+2) decrypt
+
+"""
+
+sel=raw_input("\033[1;36mZCD > \033[1;m")
+
+if sel == "1":
+
+	os.system("reset")
+
+	text =raw_input("\033[1;36m\n\nText : \033[1;m")
+
+	source="defghijklmnoprstuvyzabc"
+	target="abcdefghijklmnoprstuvyz"
+
+	change=string.maketrans(source,target)
+	finchange=text.translate(change)
+
+	print "\n","\033[1;36mCrypted : \033[1;m",finchange,"\n","\n"
+
+if sel == "2":
+
+	os.system("reset")
+
+	text =raw_input("\033[1;36m\n\nText : \033[1;m")
+
+	source="defghijklmnoprstuvyzabc"
+	target="abcdefghijklmnoprstuvyz"
+
+	change=string.maketrans(target,source)
+	finchange=text.translate(change)
+
+	print "\n","\033[1;36mDecrypted : \033[1;m",finchange,"\n","\n"
+
